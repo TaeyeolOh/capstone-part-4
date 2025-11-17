@@ -1,0 +1,18 @@
+# Ignore local environment files
+.env
+*.env
+
+# Ignore target directory (we build inside container)
+target/
+
+# Ignore IDE/project files
+*.iml
+.idea/
+.vscode/
+*.log
+
+# Ignore system files
+.DS_Store
+
+# Ignore Maven wrapper cache
+.mvn/wrapper/maven-wrapper.jar

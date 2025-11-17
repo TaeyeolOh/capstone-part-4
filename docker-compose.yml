@@ -1,0 +1,54 @@
+version: "3.9"
+
+# Define the individual containers that make up application
+
+services:
+ # MongoDB Service
+  mongo:
+    image: mongo:6
+    container_name: evolocity-mongo
+    ports:
+      - "27017:27017"
+    # Persist MongoDB data 
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: ${LOCAL_MONGODB_DB}
+
+ # Java Spring Boot Backend Service
+  backend:
+    # consistent builds across all operating systems (Windows, macOS, Linux),
+    platform: linux/amd64
+    build:
+      context: ./backend
+    container_name: evolocity-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    environment:
+      LOCAL_MONGODB_URI: ${LOCAL_MONGODB_URI}
+      LOCAL_MONGODB_DB: ${LOCAL_MONGODB_DB}
+      ATLAS_MONGODB_URI: ${ATLAS_MONGODB_URI}
+      ATLAS_MONGODB_DB: ${ATLAS_MONGODB_DB}
+      USE_ATLAS: ${USE_ATLAS}
+      SERVER_PORT: ${SERVER_PORT}
+      FRONTEND_DEV_URL: ${FRONTEND_DEV_URL}
+      BACKEND_DEV_URL: ${BACKEND_DEV_URL}
+    # temporary storage for database snapshots
+    volumes:
+      - ./tmpdump:/app/tmpdump
+
+  # React + Vite Frontend Service
+  frontend:
+    build:
+      context: ./frontend
+    container_name: evolocity-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+# Named Volume to persist MongoDB data across container restarts
+volumes:
+  mongo-data:

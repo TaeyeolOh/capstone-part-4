@@ -1,0 +1,232 @@
+{
+  "vehicles": [
+    {
+      "_id": "vehicle1",
+      "vehicleType": "Bike",
+      "vehicleClass": "Standard"
+    },
+    {
+      "_id": "vehicle2",
+      "vehicleType": "Bike",
+      "vehicleClass": "Open"
+    },
+    {
+      "_id": "vehicle3",
+      "vehicleType": "Kart",
+      "vehicleClass": "Standard"
+    },
+    {
+      "_id": "vehicle4",
+      "vehicleType": "Kart",
+      "vehicleClass": "Standard"
+    },
+    {
+      "_id": "vehicle5",
+      "vehicleType": "Kart",
+      "vehicleClass": "Open"
+    }
+  ],
+  "teams": [
+    {
+      "_id": "team1",
+      "teamNumber": 101,
+      "teamName": "Team Alpha",
+      "schoolName": "University A",
+      "vehicleIds": [],
+      "createdAt": "2025-01-15T09:00:00Z",
+      "updatedAt": "2025-01-15T09:00:00Z"
+    },
+    {
+      "_id": "team2",
+      "teamNumber": 102,
+      "teamName": "Team Beta",
+      "schoolName": "University B",
+      "vehicleIds": [],
+      "createdAt": "2025-01-16T09:00:00Z",
+      "updatedAt": "2025-01-16T09:00:00Z"
+    },
+    {
+      "_id": "team3",
+      "teamNumber": 103,
+      "teamName": "Team Gamma",
+      "schoolName": "University C",
+      "vehicleIds": [],
+      "createdAt": "2025-01-17T09:00:00Z",
+      "updatedAt": "2025-01-17T09:00:00Z"
+    },
+    {
+      "_id": "team4",
+      "teamNumber": 104,
+      "teamName": "Team Delta",
+      "schoolName": "University D",
+      "vehicleIds": [],
+      "createdAt": "2025-01-18T09:00:00Z",
+      "updatedAt": "2025-01-18T09:00:00Z"
+    },
+    {
+      "_id": "team5",
+      "teamNumber": 105,
+      "teamName": "Team Epsilon",
+      "schoolName": "University E",
+      "vehicleIds": [],
+      "createdAt": "2025-01-19T09:00:00Z",
+      "updatedAt": "2025-01-19T09:00:00Z"
+    }
+  ],
+  "ecus": [
+    {
+      "_id": "ecu1",
+      "serialNumber": "ECU-0001",
+      "ecuStatusList": [
+        {
+          "timestamp": "2025-05-01T10:00:00Z",
+          "voltage": 48.5,
+          "current": 12.3,
+            "power": 596.55
+        },
+        {
+          "timestamp": "2025-05-01T10:05:00Z",
+          "voltage": 48.2,
+          "current": 12.5,
+            "power": 602.5
+        }
+      ],
+      "createdAt": "2025-01-15T09:00:00Z",
+      "updatedAt": "2025-05-01T10:05:00Z"
+    },
+    {
+      "_id": "ecu2",
+      "serialNumber": "ECU-0002",
+      "ecuStatusList": [
+        {
+          "timestamp": "2025-05-01T10:00:00Z",
+          "voltage": 47.8,
+          "current": 11.9,
+            "power": 568.82
+        }
+      ],
+      "createdAt": "2025-01-16T09:00:00Z",
+      "updatedAt": "2025-05-01T10:00:00Z"
+    },
+    {
+      "_id": "ecu3",
+      "serialNumber": "ECU-0003",
+      "ecuStatusList": [
+        {
+          "timestamp": "2025-05-01T10:00:00Z",
+          "voltage": 49.1,
+          "current": 13.2,
+            "power": 648.12
+        }
+      ],
+      "createdAt": "2025-01-17T09:00:00Z",
+      "updatedAt": "2025-05-01T10:00:00Z"
+    },
+    {
+      "_id": "ecu4",
+      "serialNumber": "ECU-0004",
+      "ecuStatusList": [
+        {
+          "timestamp": "2025-05-01T10:00:00Z",
+          "voltage": 48.9,
+          "current": 12.8,
+          "power": 625.92
+        }
+      ],
+      "createdAt": "2025-01-18T09:00:00Z",
+      "updatedAt": "2025-05-01T10:00:00Z"
+    },
+    {
+      "_id": "ecu5",
+      "serialNumber": "ECU-0005",
+      "ecuStatusList": [
+        {
+          "timestamp": "2025-05-01T10:00:00Z",
+          "voltage": 47.5,
+          "current": 12.1,
+          "power": 574.75
+        }
+      ],
+      "createdAt": "2025-01-19T09:00:00Z",
+      "updatedAt": "2025-05-01T10:00:00Z"
+    }
+  ],
+  "competitions": [
+    {
+      "_id": "comp1",
+      "name": "National Championship",
+      "description": "Primary annual competition event",
+      "location": "City X",
+      "teamIds": [],
+      "eventIds": [],
+      "date": "2025-08-05T08:00:00Z",
+      "isFinal": true,
+      "createdAt": "2025-02-01T09:00:00Z",
+      "updatedAt": "2025-02-01T09:00:00Z"
+    },
+    {
+      "_id": "comp2",
+      "name": "Regional Qualifier",
+      "description": "Qualifying event for national competition",
+      "location": "City Y",
+      "teamIds": [],
+      "eventIds": [],
+      "date": "2025-07-15T08:00:00Z",
+      "isFinal": false,
+      "createdAt": "2025-02-02T09:00:00Z",
+      "updatedAt": "2025-02-02T09:00:00Z"
+    }
+  ],
+  "events": [
+    {
+      "_id": "event1",
+      "competitionId": "comp1",
+      "name": "Speed Test",
+      "eventType": "Performance",
+      "ecuIds": [],
+      "startTime": "2025-08-05T09:00:00Z",
+      "endTime": "2025-08-05T12:00:00Z",
+      "createdAt": "2025-02-01T09:00:00Z"
+    },
+    {
+      "_id": "event2",
+      "competitionId": "comp1",
+      "name": "Maneuvering",
+      "eventType": "Performance",
+      "ecuIds": [],
+      "startTime": "2025-08-05T13:00:00Z",
+      "endTime": "2025-08-05T16:00:00Z",
+      "createdAt": "2025-02-01T09:00:00Z"
+    },
+    {
+      "_id": "event3",
+      "competitionId": "comp1",
+      "name": "Endurance",
+      "eventType": "Performance",
+      "ecuIds": [],
+      "startTime": "2025-08-06T09:00:00Z",
+      "endTime": "2025-08-06T17:00:00Z",
+      "createdAt": "2025-02-01T09:00:00Z"
+    },
+    {
+      "_id": "event4",
+      "competitionId": "comp2",
+      "name": "Preliminary Run",
+      "eventType": "Performance",
+      "ecuIds": [],
+      "startTime": "2025-07-15T10:00:00Z",
+      "endTime": "2025-07-15T14:00:00Z",
+      "createdAt": "2025-02-02T09:00:00Z"
+    },
+    {
+      "_id": "event5",
+      "competitionId": "comp2",
+      "name": "Design Review",
+      "eventType": "Presentation",
+      "ecuIds": [],
+      "startTime": "2025-07-16T09:00:00Z",
+      "endTime": "2025-07-16T12:00:00Z",
+      "createdAt": "2025-02-02T09:00:00Z"
+    }
+  ]
+}
